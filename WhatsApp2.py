@@ -2,7 +2,7 @@ from selenium import webdriver
 import pandas as pd
 import csv
 
-driver= webdriver.Chrome(executable_path='/home/lokesh/Downloads/chromedriver')
+driver= webdriver.Chrome(executable_path='C:\\Users\\Dell\\Downloads\\chromedriver_win32_2\\chromedriver')
 driver.get('https://web.whatsapp.com/')
 
 input('Enter anything after scanning QR code!!\n')
