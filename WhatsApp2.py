@@ -2,7 +2,7 @@ from selenium import webdriver
 import pandas as pd
 import csv
 
-driver= webdriver.Chrome(executable_path='C:\\Users\\Dell\\Downloads\\chromedriver_win32_2\\chromedriver')
+driver= webdriver.Chrome(executable_path='./chromedriver')
 driver.get('https://web.whatsapp.com/')
 
 input('Enter anything after scanning QR code!!\n')
@@ -17,9 +17,9 @@ if n==1:
         name = input('Enter the name of user or group: ')
         user = driver.find_element_by_xpath('//span[@title="{}"]'.format(name))
         user.click()
-        msg_box = driver.find_element_by_class_name('_13mgZ')
+        msg_box = driver.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div[2]/div/div[2]')
         msg_box.send_keys(msg)
-        button = driver.find_element_by_class_name('_3M-N-')
+        button = driver.find_element_by_class_name('_1E0Oz')
         button.click()
 
 elif n==2:
@@ -31,7 +31,7 @@ elif n==2:
         # print(name)
         user = driver.find_element_by_xpath('//span[@title="{}"]'.format(name))
         user.click()
-        msg_box = driver.find_element_by_class_name('_13mgZ')
+        msg_box = driver.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div[2]/div/div[2]')
         msg_box.send_keys(msg)
-        button = driver.find_element_by_class_name('_3M-N-')
+        button = driver.find_element_by_class_name('_1E0Oz')
         button.click()
